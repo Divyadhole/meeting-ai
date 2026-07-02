@@ -60,6 +60,16 @@ def search(q: str = Query(min_length=2)) -> list[dict]:
     return store.search(q)
 
 
+@app.get("/api/analytics")
+def analytics() -> dict:
+    return store.analytics()
+
+
+@app.get("/api/feedback")
+def training_examples() -> list[dict]:
+    return store.feedback_examples()
+
+
 @app.post("/api/meetings/{meeting_id}/feedback", status_code=204, response_class=Response)
 def feedback(meeting_id: str, payload: FeedbackRequest) -> Response:
     if not store.get(meeting_id):

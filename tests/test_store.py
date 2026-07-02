@@ -18,6 +18,10 @@ class StoreTests(unittest.TestCase):
             self.assertEqual(store.get("m1"), item)
             self.assertEqual(store.search("authentication")[0]["meeting_id"], "m1")
             store.feedback("m1", 1, None)
+            analytics = store.analytics()
+            self.assertEqual(analytics["meetings"], 1)
+            self.assertEqual(analytics["top_topics"][0]["name"], "authentication")
+            self.assertEqual(store.feedback_examples()[0]["rating"], 1)
 
 
 if __name__ == "__main__":

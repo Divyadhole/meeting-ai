@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
+from collections import Counter
 from pathlib import Path
 
 
@@ -40,3 +41,35 @@ class MeetingStore:
     def feedback(self, meeting_id: str, rating: int, correction: str | None) -> None:
         self.connection.execute("INSERT INTO feedback(meeting_id,rating,correction) VALUES(?,?,?)", (meeting_id, rating, correction))
         self.connection.commit()
+
+    def analytics(self) -> dict:
+        meetings = self.all()
+        topics: Counter[str] = Counter()
+        speakers: Counter[str] = Counter()
+        for meeting in meetings:
+            topics.update(meeting.get("topics", []))
+            speakers.update(meeting.get("participation", {}))
+        feedback_rows = self.connection.execute(
+            "SELECT rating, COUNT(*) AS count FROM feedback GROUP BY rating"
+        ).fetchall()
+        return {
+            "meetings": len(meetings),
+            "decisions": sum(len(item.get("decisions", [])) for item in meetings),
+            "action_items": sum(len(item.get("action_items", [])) for item in meetings),
+            "open_questions": sum(len(item.get("questions", [])) for item in meetings),
+            "risks": sum(len(item.get("risks", [])) for item in meetings),
+            "top_topics": [{"name": name, "count": count} for name, count in topics.most_common(8)],
+            "active_speakers": [{"name": name, "share": round(share, 1)} for name, share in speakers.most_common(8)],
+            "feedback": {str(row["rating"]): row["count"] for row in feedback_rows},
+        }
+
+    def feedback_examples(self) -> list[dict]:
+        rows = self.connection.execute(
+            """SELECT f.meeting_id, f.rating, f.correction, f.created_at, m.title, m.transcript, m.intelligence
+               FROM feedback f JOIN meetings m ON m.id=f.meeting_id ORDER BY f.created_at DESC"""
+        ).fetchall()
+        return [{
+            "meeting_id": row["meeting_id"], "title": row["title"], "rating": row["rating"],
+            "correction": row["correction"], "created_at": row["created_at"],
+            "transcript": row["transcript"], "original_output": json.loads(row["intelligence"]),
+        } for row in rows]

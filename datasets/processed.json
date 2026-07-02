@@ -67,7 +67,7 @@
     },
     "model": "baseline-v1",
     "prompt_version": "v1",
-    "latency_ms": 3.17,
+    "latency_ms": 1.29,
     "estimated_cost_usd": 0
   },
   {
@@ -137,7 +137,7 @@
     },
     "model": "baseline-v1",
     "prompt_version": "v1",
-    "latency_ms": 0.08,
+    "latency_ms": 0.09,
     "estimated_cost_usd": 0
   },
   {

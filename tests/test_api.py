@@ -33,6 +33,8 @@ class APITests(unittest.TestCase):
         feedback = self.client.post(f"/api/meetings/{meeting['meeting_id']}/feedback", json={"rating": 1})
         self.assertEqual(feedback.status_code, 204)
         self.assertEqual(feedback.content, b"")
+        self.assertEqual(self.client.get("/api/analytics").json()["meetings"], 1)
+        self.assertEqual(len(self.client.get("/api/feedback").json()), 1)
 
 
 if __name__ == "__main__":
