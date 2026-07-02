@@ -1,0 +1,32 @@
+[
+  {
+    "id": "product-sync-001",
+    "title": "Product launch sync",
+    "transcript": "[00:00] Maya: The goal is to lock the beta launch plan.\n[00:18] Leo: We decided to launch the private beta on August 15.\n[00:38] Maya: Leo will prepare the onboarding checklist by Friday.\n[00:55] Priya: Are the security review slots confirmed?\n[01:14] Leo: Risk: the SSO dependency might slip.",
+    "expected": {"actions": ["prepare the onboarding checklist by Friday"], "decisions": ["launch the private beta on August 15"]}
+  },
+  {
+    "id": "engineering-002",
+    "title": "Architecture review",
+    "transcript": "[00:00] Divya: Today we need to choose the retrieval store.\n[00:20] Sam: We chose Qdrant for semantic search.\n[00:41] Divya: I'll publish the migration plan by Tuesday.\n[01:05] Sam: What is our rollback threshold?\n[01:25] Divya: Concern: indexing may exceed the latency budget.",
+    "expected": {"actions": ["publish the migration plan by Tuesday"], "decisions": ["Qdrant for semantic search"]}
+  },
+  {
+    "id": "customer-003",
+    "title": "Customer escalation",
+    "transcript": "[00:00] Nia: We are here to resolve the export failure.\n[00:25] Omar: We agreed to ship the patch behind a feature flag.\n[00:48] Nia: Omar will send the customer an update by EOD.\n[01:02] Omar: Is the failure limited to large workspaces?\n[01:30] Nia: Blocked: production logs expire after seven days.",
+    "expected": {"actions": ["send the customer an update by EOD"], "decisions": ["ship the patch behind a feature flag"]}
+  },
+  {
+    "id": "research-004",
+    "title": "Evaluation planning",
+    "transcript": "[00:00] Divya: The goal is to finalize our model evaluation.\n[00:16] Chen: Decision: use evidence precision as the launch gate.\n[00:37] Divya: Chen will label fifty hard examples by Monday.\n[00:59] Chen: Should corrections count as partial credit?\n[01:18] Divya: Risk: synthetic meetings may inflate performance.",
+    "expected": {"actions": ["label fifty hard examples by Monday"], "decisions": ["use evidence precision as the launch gate"]}
+  },
+  {
+    "id": "design-005",
+    "title": "Dashboard critique",
+    "transcript": "[00:00] Ava: We need to make the intelligence view easier to scan.\n[00:22] Ben: Let's put evidence beside every extracted claim.\n[00:44] Ava: Ben will prototype the timeline by tomorrow.\n[01:00] Ben: Which metric should lead the benchmark card?\n[01:20] Ava: Concern: too many charts could hide the actual product.",
+    "expected": {"actions": ["prototype the timeline by tomorrow"], "decisions": ["put evidence beside every extracted claim"]}
+  }
+]

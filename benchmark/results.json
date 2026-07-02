@@ -1,0 +1,84 @@
+{
+  "model": "baseline-v1",
+  "prompt_version": "v1",
+  "cases": 5,
+  "metrics": {
+    "action_precision": 1.0,
+    "action_recall": 1.0,
+    "action_f1": 1.0,
+    "decision_precision": 1.0,
+    "decision_recall": 1.0,
+    "decision_f1": 1.0,
+    "hallucination_rate": 0.0,
+    "json_validity": 1.0,
+    "latency_ms": 0.0702,
+    "cost_usd": 0.0
+  },
+  "results": [
+    {
+      "id": "product-sync-001",
+      "action_precision": 1.0,
+      "action_recall": 1.0,
+      "action_f1": 1.0,
+      "decision_precision": 1.0,
+      "decision_recall": 1.0,
+      "decision_f1": 1.0,
+      "hallucination_rate": 0.0,
+      "json_validity": 1.0,
+      "latency_ms": 0.08337499457411468,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "engineering-002",
+      "action_precision": 1.0,
+      "action_recall": 1.0,
+      "action_f1": 1.0,
+      "decision_precision": 1.0,
+      "decision_recall": 1.0,
+      "decision_f1": 1.0,
+      "hallucination_rate": 0.0,
+      "json_validity": 1.0,
+      "latency_ms": 0.06879100692458451,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "customer-003",
+      "action_precision": 1.0,
+      "action_recall": 1.0,
+      "action_f1": 1.0,
+      "decision_precision": 1.0,
+      "decision_recall": 1.0,
+      "decision_f1": 1.0,
+      "hallucination_rate": 0.0,
+      "json_validity": 1.0,
+      "latency_ms": 0.0686249986756593,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "research-004",
+      "action_precision": 1.0,
+      "action_recall": 1.0,
+      "action_f1": 1.0,
+      "decision_precision": 1.0,
+      "decision_recall": 1.0,
+      "decision_f1": 1.0,
+      "hallucination_rate": 0.0,
+      "json_validity": 1.0,
+      "latency_ms": 0.0637920165900141,
+      "cost_usd": 0.0
+    },
+    {
+      "id": "design-005",
+      "action_precision": 1.0,
+      "action_recall": 1.0,
+      "action_f1": 1.0,
+      "decision_precision": 1.0,
+      "decision_recall": 1.0,
+      "decision_f1": 1.0,
+      "hallucination_rate": 0.0,
+      "json_validity": 1.0,
+      "latency_ms": 0.06645798566751182,
+      "cost_usd": 0.0
+    }
+  ]
+}

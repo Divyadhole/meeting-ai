@@ -1,0 +1,353 @@
+[
+  {
+    "meeting_id": "product-sync-001",
+    "title": "Product launch sync",
+    "goal": "The goal is to lock the beta launch plan",
+    "summary": "The team made 1 decision. They assigned 1 action item. 1 risk was flagged.",
+    "decisions": [
+      {
+        "text": "launch the private beta on August 15",
+        "confidence": 0.88,
+        "evidence": {
+          "quote": "We decided to launch the private beta on August 15.",
+          "timestamp": "00:18",
+          "speaker": "Leo"
+        }
+      }
+    ],
+    "action_items": [
+      {
+        "task": "prepare the onboarding checklist by Friday",
+        "owner": "Leo",
+        "deadline": "Friday",
+        "priority": "medium",
+        "confidence": 0.84,
+        "evidence": {
+          "quote": "Leo will prepare the onboarding checklist by Friday.",
+          "timestamp": "00:38",
+          "speaker": "Maya"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "text": "Are the security review slots confirmed?",
+        "asked_by": "Priya",
+        "answered": false,
+        "evidence": {
+          "quote": "Are the security review slots confirmed?",
+          "timestamp": "00:55",
+          "speaker": "Priya"
+        }
+      }
+    ],
+    "risks": [
+      {
+        "text": "the SSO dependency might slip",
+        "severity": "medium",
+        "evidence": {
+          "quote": "Risk: the SSO dependency might slip.",
+          "timestamp": "01:14",
+          "speaker": "Leo"
+        }
+      }
+    ],
+    "topics": [
+      "Beta",
+      "Launch",
+      "Goal",
+      "Lock",
+      "Plan",
+      "Decided"
+    ],
+    "participation": {
+      "Maya": 40.0,
+      "Leo": 40.0,
+      "Priya": 20.0
+    },
+    "model": "baseline-v1",
+    "prompt_version": "v1",
+    "latency_ms": 3.17,
+    "estimated_cost_usd": 0
+  },
+  {
+    "meeting_id": "engineering-002",
+    "title": "Architecture review",
+    "goal": "Today we need to choose the retrieval store",
+    "summary": "The team made 1 decision. They assigned 1 action item. 1 risk was flagged.",
+    "decisions": [
+      {
+        "text": "Qdrant for semantic search",
+        "confidence": 0.88,
+        "evidence": {
+          "quote": "We chose Qdrant for semantic search.",
+          "timestamp": "00:20",
+          "speaker": "Sam"
+        }
+      }
+    ],
+    "action_items": [
+      {
+        "task": "publish the migration plan by Tuesday",
+        "owner": "Divya",
+        "deadline": "Tuesday",
+        "priority": "medium",
+        "confidence": 0.84,
+        "evidence": {
+          "quote": "I'll publish the migration plan by Tuesday.",
+          "timestamp": "00:41",
+          "speaker": "Divya"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is our rollback threshold?",
+        "asked_by": "Sam",
+        "answered": false,
+        "evidence": {
+          "quote": "What is our rollback threshold?",
+          "timestamp": "01:05",
+          "speaker": "Sam"
+        }
+      }
+    ],
+    "risks": [
+      {
+        "text": "indexing may exceed the latency budget",
+        "severity": "medium",
+        "evidence": {
+          "quote": "Concern: indexing may exceed the latency budget.",
+          "timestamp": "01:25",
+          "speaker": "Divya"
+        }
+      }
+    ],
+    "topics": [
+      "Today",
+      "Need",
+      "Choose",
+      "Retrieval",
+      "Store",
+      "Chose"
+    ],
+    "participation": {
+      "Divya": 60.0,
+      "Sam": 40.0
+    },
+    "model": "baseline-v1",
+    "prompt_version": "v1",
+    "latency_ms": 0.08,
+    "estimated_cost_usd": 0
+  },
+  {
+    "meeting_id": "customer-003",
+    "title": "Customer escalation",
+    "goal": "We are here to resolve the export failure",
+    "summary": "The team made 1 decision. They assigned 1 action item. 1 risk was flagged.",
+    "decisions": [
+      {
+        "text": "ship the patch behind a feature flag",
+        "confidence": 0.88,
+        "evidence": {
+          "quote": "We agreed to ship the patch behind a feature flag.",
+          "timestamp": "00:25",
+          "speaker": "Omar"
+        }
+      }
+    ],
+    "action_items": [
+      {
+        "task": "send the customer an update by EOD",
+        "owner": "Omar",
+        "deadline": "EOD",
+        "priority": "medium",
+        "confidence": 0.84,
+        "evidence": {
+          "quote": "Omar will send the customer an update by EOD.",
+          "timestamp": "00:48",
+          "speaker": "Nia"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "text": "Is the failure limited to large workspaces?",
+        "asked_by": "Omar",
+        "answered": false,
+        "evidence": {
+          "quote": "Is the failure limited to large workspaces?",
+          "timestamp": "01:02",
+          "speaker": "Omar"
+        }
+      }
+    ],
+    "risks": [
+      {
+        "text": "production logs expire after seven days",
+        "severity": "high",
+        "evidence": {
+          "quote": "Blocked: production logs expire after seven days.",
+          "timestamp": "01:30",
+          "speaker": "Nia"
+        }
+      }
+    ],
+    "topics": [
+      "Failure",
+      "Here",
+      "Resolve",
+      "Export",
+      "Agreed",
+      "Ship"
+    ],
+    "participation": {
+      "Nia": 60.0,
+      "Omar": 40.0
+    },
+    "model": "baseline-v1",
+    "prompt_version": "v1",
+    "latency_ms": 0.07,
+    "estimated_cost_usd": 0
+  },
+  {
+    "meeting_id": "research-004",
+    "title": "Evaluation planning",
+    "goal": "The goal is to finalize our model evaluation",
+    "summary": "The team made 1 decision. They assigned 1 action item. 1 risk was flagged.",
+    "decisions": [
+      {
+        "text": "use evidence precision as the launch gate",
+        "confidence": 0.88,
+        "evidence": {
+          "quote": "Decision: use evidence precision as the launch gate.",
+          "timestamp": "00:16",
+          "speaker": "Chen"
+        }
+      }
+    ],
+    "action_items": [
+      {
+        "task": "label fifty hard examples by Monday",
+        "owner": "Chen",
+        "deadline": "Monday",
+        "priority": "medium",
+        "confidence": 0.84,
+        "evidence": {
+          "quote": "Chen will label fifty hard examples by Monday.",
+          "timestamp": "00:37",
+          "speaker": "Divya"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "text": "Should corrections count as partial credit?",
+        "asked_by": "Chen",
+        "answered": false,
+        "evidence": {
+          "quote": "Should corrections count as partial credit?",
+          "timestamp": "00:59",
+          "speaker": "Chen"
+        }
+      }
+    ],
+    "risks": [
+      {
+        "text": "synthetic meetings may inflate performance",
+        "severity": "medium",
+        "evidence": {
+          "quote": "Risk: synthetic meetings may inflate performance.",
+          "timestamp": "01:18",
+          "speaker": "Divya"
+        }
+      }
+    ],
+    "topics": [
+      "Goal",
+      "Finalize",
+      "Model",
+      "Evaluation",
+      "Decision",
+      "Evidence"
+    ],
+    "participation": {
+      "Divya": 60.0,
+      "Chen": 40.0
+    },
+    "model": "baseline-v1",
+    "prompt_version": "v1",
+    "latency_ms": 0.06,
+    "estimated_cost_usd": 0
+  },
+  {
+    "meeting_id": "design-005",
+    "title": "Dashboard critique",
+    "goal": "We need to make the intelligence view easier to scan",
+    "summary": "The team made 1 decision. They assigned 1 action item. 1 risk was flagged.",
+    "decisions": [
+      {
+        "text": "put evidence beside every extracted claim",
+        "confidence": 0.88,
+        "evidence": {
+          "quote": "Let's put evidence beside every extracted claim.",
+          "timestamp": "00:22",
+          "speaker": "Ben"
+        }
+      }
+    ],
+    "action_items": [
+      {
+        "task": "prototype the timeline by tomorrow",
+        "owner": "Ben",
+        "deadline": "tomorrow",
+        "priority": "medium",
+        "confidence": 0.84,
+        "evidence": {
+          "quote": "Ben will prototype the timeline by tomorrow.",
+          "timestamp": "00:44",
+          "speaker": "Ava"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "text": "Which metric should lead the benchmark card?",
+        "asked_by": "Ben",
+        "answered": false,
+        "evidence": {
+          "quote": "Which metric should lead the benchmark card?",
+          "timestamp": "01:00",
+          "speaker": "Ben"
+        }
+      }
+    ],
+    "risks": [
+      {
+        "text": "too many charts could hide the actual product",
+        "severity": "medium",
+        "evidence": {
+          "quote": "Concern: too many charts could hide the actual product.",
+          "timestamp": "01:20",
+          "speaker": "Ava"
+        }
+      }
+    ],
+    "topics": [
+      "Need",
+      "Make",
+      "Intelligence",
+      "View",
+      "Easier",
+      "Scan"
+    ],
+    "participation": {
+      "Ava": 60.0,
+      "Ben": 40.0
+    },
+    "model": "baseline-v1",
+    "prompt_version": "v1",
+    "latency_ms": 0.06,
+    "estimated_cost_usd": 0
+  }
+]
