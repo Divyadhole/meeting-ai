@@ -7,7 +7,7 @@ name = "fathom-plus-plus"
 version = "0.1.0"
 description = "Evidence-grounded meeting intelligence and LLM evaluation platform"
 requires-python = ">=3.10"
-dependencies = ["fastapi>=0.115,<1", "uvicorn[standard]>=0.34,<1", "pydantic>=2.11,<3"]
+dependencies = ["fastapi>=0.115,<1", "uvicorn[standard]>=0.34,<1", "pydantic>=2.11,<3", "httpx>=0.27,<1"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

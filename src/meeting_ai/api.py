@@ -4,7 +4,7 @@ import os
 import uuid
 from pathlib import Path
 
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
@@ -60,11 +60,12 @@ def search(q: str = Query(min_length=2)) -> list[dict]:
     return store.search(q)
 
 
-@app.post("/api/meetings/{meeting_id}/feedback", status_code=204)
-def feedback(meeting_id: str, payload: FeedbackRequest) -> None:
+@app.post("/api/meetings/{meeting_id}/feedback", status_code=204, response_class=Response)
+def feedback(meeting_id: str, payload: FeedbackRequest) -> Response:
     if not store.get(meeting_id):
         raise HTTPException(404, "Meeting not found")
     store.feedback(meeting_id, payload.rating, payload.correction)
+    return Response(status_code=204)
 
 
 @app.get("/")
